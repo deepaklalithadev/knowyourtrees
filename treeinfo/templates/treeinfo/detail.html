@@ -1,0 +1,108 @@
+{% extends 'treeinfo/base.html' %}
+{% block body %}
+{% load static %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="row">
+                <div class="card p-1">
+                <h2>{{tree.name}} ({{tree.sciname}})</h2><span></span>
+                <h4>{{tree.localname1}} / {{tree.localname2}}</h4><br>
+                <p>{{tree.desc}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card p-1">
+                <p>{{tree.uses}}</p>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="card-deck mt-1">
+                <div class="card p-2">
+                    <label>maxheight:-</label><h5>{{tree.maxheight}} mtr</h5>
+                </div>
+                <div class="card p-2">
+                    <label>lifespan:-</label><h5>{{tree.lifespan}} years</h5>
+                </div>
+                <div class="card p-2">
+                    <label>timbervalue:-</label><h5>{{tree.timbervalue}} Rs</h5>
+                </div>
+                <div class="card p-2">
+                    <label>avgtreeweight:-</label><h5>{{tree.avgtreeweight}} cbt</h5>
+                </div>
+                <div class="card p-2">
+                    <label>matureage:-</label><h5>{{tree.matureage}} years</h5>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="card">
+                <img class="img-thumbnail centre" src="{{tree.treepic.url}}" width="400" height="500">
+            </div>
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card p-2">
+                <h5>Soil Requirement:-</h5><br>
+                <p>{{tree.req_soil}}</p>
+            </div>
+            <div class="card p-2">
+                <h5>Temp Requirement:-</h5><br>
+                <p>{{tree.req_temp}}</p>
+            </div>
+            <div class="card p-2">
+                <h5>Water Requirement:-</h5><br>
+                <p>{{tree.req_water}}</p>
+            </div>
+            <div class="card p-2">
+                <h5>Rain Requirement:-</h5><br>
+                <p>{{tree.req_rain}}</p>
+            </div>
+            <div class="card p-2">
+                <h5>Altitude Requirement:-</h5><br>
+                <p>{{tree.req_alt}}</p>
+            </div>
+            <div class="card p-2">
+                <h5>Girth Requirement:-</h5><br>
+                <p>{{tree.req_girth}}</p>
+            </div>
+            <div class="card p-2">
+                <h5>Other Requirement:-</h5><br>
+                <p>{{tree.req_other}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card-deck mt-1">
+                <div class="card p-1">
+                    <img class="img-thumbnail centre" src="{{tree.trunkpic.url}}" width="200" height="100">
+                    <p>{{tree.trunkdesc}}</p>
+                </div>
+                <div class="card p-1">
+                    <img class="img-thumbnail centre" src="{{tree.leavespic.url}}" width="200" height="100">
+                    <p>{{tree.leavesdesc}}</p>
+                </div>
+                <div class="card p-1">
+                    <img class="img-thumbnail centre" src="{{tree.flowerpic.url}}" width="200" height="100">
+                    <p>{{tree.flowerdesc}}</p>
+                </div>
+                <div class="card p-1">
+                    <img class="img-thumbnail centre" src="{{tree.other1pic.url}}" width="200" height="100">
+                    <p>{{tree.other1desc}}</p>
+                </div>
+                <div class="card p-1">
+                    <img class="img-thumbnail centre" src="{{tree.other2pic.url}}" width="200" height="100">
+                    <p>{{tree.other2desc}}</p>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

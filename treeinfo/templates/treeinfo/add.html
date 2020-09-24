@@ -1,0 +1,41 @@
+{% extends 'treeinfo/base.html' %}
+    {% block body %}
+    {% load static %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+        <label>Tree Name : </label><br><input type="text" name="name" id="name" placeholder="name"><br><br>
+        <label>scientific Name : </label><br><input type="text" name="sciname" id="sciname" placeholder="scientific name"><br><br>
+        <label>Local Name1 : </label><br><input type="text" name="localname1" id="localname1" placeholder="localname1"><br><br>
+        <label>Local Name2 : </label><br><input type="text" name="localname2" id="localname2" placeholder="localname2"><br><br>
+        <label>Desc : </label><br><input type="text" name="desc" id="desc" placeholder="desc"><br><br>
+        <label>Uses : </label><br><input type="text" name="uses" id="uses" placeholder="uses"><br><br>
+
+        <label>Maxheight : </label><br><input type="number" name="maxheight" id="maxheight" placeholder="maxheight"><br><br>
+        <label>Lifespan : </label><br><input type="number" name="lifespan" id="lifespan" placeholder="lifespan"><br><br>
+        <label>Timbervalue : </label><br><input type="number" name="timbervalue" id="timbervalue" placeholder="timbervalue"><br><br>
+        <label>Avgtreeweight : </label><br><input type="number" name="avgtreeweight" id="avgtreeweight" placeholder="avgtreeweight"><br><br>
+        <label>MatureAge : </label><br><input type="number" name="matureage" id="matureage" placeholder="matureage"><br><br>
+
+        <label>req_soil : </label><br><input type="text" name="req_soil" id="req_soil" placeholder="req_soil"><br><br>
+        <label>req_temp : </label><br><input type="text" name="req_temp" id="req_temp" placeholder="req_temp"><br><br>
+        <label>req_water : </label><br><input type="text" name="req_water" id="req_water" placeholder="req_water"><br><br>
+        <label>req_rain : </label><br><input type="text" name="req_rain" id="req_rain" placeholder="req_rain"><br><br>
+        <label>req_alt : </label><br><input type="text" name="req_alt" id="req_alt" placeholder="req_alt"><br><br>
+        <label>req_girth : </label><br><input type="text" name="req_girth" id="req_girth" placeholder="req_girth"><br><br>
+        <label>req_other : </label><br><input type="text" name="req_other" id="req_other" placeholder="req_other"><br><br>
+
+        <label>treedesc : </label><br><input type="text" name="treedesc" id="treedesc" placeholder="treedesc"><br>
+        <label>treepic : </label><br><input type="file" name="treepic" id="treepic" ><br><br>
+         <label>trunkdesc : </label><br><input type="text" name="trunkdesc" id="trunkdesc" placeholder="trunkdesc"><br>
+        <label>trunkpic : </label><br><input type="file" name="trunkpic" id="trunkpic" ><br><br>
+         <label>leavesdesc : </label><br><input type="text" name="leavesdesc" id="leavesdesc" placeholder="leavesdesc"><br>
+        <label>leavespic : </label><br><input type="file" name="leavespic" id="leavespic" ><br><br>
+         <label>flowerdesc : </label><br><input type="text" name="flowerdesc" id="flowerdesc" placeholder="flowerdesc"><br>
+        <label>flowerpic : </label><br><input type="file" name="flowerpic" id="flowerpic" ><br><br>
+         <label>other1desc : </label><br><input type="text" name="other1desc" id="other1desc" placeholder="other1desc"><br>
+        <label>other1pic : </label><br><input type="file" name="other1pic" id="other1pic" ><br><br>
+         <label>other2desc : </label><br><input type="text" name="other2desc" id="other2desc" placeholder="other2desc"><br>
+        <label>other2pic : </label><br><input type="file" name="other2pic" id="other2pic" ><br><br>
+<input type="submit" name="" id="" >
+</form>
+    {% endblock %}
