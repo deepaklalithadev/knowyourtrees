@@ -24,5 +24,6 @@ urlpatterns = [
     path('', views.home,name='default'),
     path('add/', views.add, name='add'),
     path('detail/<int:tree_id>', views.detail, name='detail'),
-    path('update/<int:tid>', views.update, name='update'),
+    path('update/<int:tid>/', views.update, name='update'),
+    path('delete/<int:id>/', views.delete, name='delete'),
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

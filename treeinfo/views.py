@@ -60,8 +60,16 @@ def add(request):
 
 def update(request,tid):
     treeinform = treeinfo.objects.get(id=tid)
-    form = treeform(request.POST or None, request.FILES,instance=treeinfo)
+    form = treeform(request.POST or None, request.FILES,instance=treeinform)
     if form.is_valid():
         form.save()
         return redirect('/')
-    return render(request,'treeinfo/update.html',{'form':form,'treeinfo':treeinform})
+    return render(request,'treeinfo/update.html',{'form':form})
+
+
+def delete(request,id):
+    if request.method == "POST":
+        treetbd = treeinfo.objects.get(id=id)
+        treetbd.delete()
+        return redirect('/')
+    return render(request,'treeinfo/delete.html')
