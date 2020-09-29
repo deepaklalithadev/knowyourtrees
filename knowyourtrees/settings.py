@@ -25,7 +25,7 @@ SECRET_KEY = 'h(_we_1ja&%rub%y8kmv_%+c-jeoa19qg41hu23j$)j&7(+y-m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['deepakdev.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost','deepakdev.pythonanywhere.com']
 
 
 # Application definition

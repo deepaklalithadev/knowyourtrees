@@ -12,6 +12,8 @@
                 <div class="card-body">
                     <h5 class="card-title">{{tree}}</h5>
                     <p class="card-text">{{tree.desc}}</p>
+                <a class="btn btn-warning" href="{% url 'update' tree.id %}">Update</a>
+                <a class="btn btn-danger" href="{% url 'delete' tree.id %}">Delete</a>
                 </div>
             </div>
         </div>
